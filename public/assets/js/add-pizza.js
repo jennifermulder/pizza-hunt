@@ -69,6 +69,8 @@ const handlePizzaSubmit = event => {
     })
     .catch(err => {
       console.log(err);
+      //when user submits without internet connection, saves record, stored in "new_pizza" Object Store in IndexedDB DB: pizza_hunt (idb.js)
+      saveRecord(formData);
     });
 };
 
